@@ -9,10 +9,8 @@ gsap.registerPlugin(ScrollTrigger, SplitText);
 const App = () => {
   useEffect(() => {
 const lenis = new Lenis({
-  duration: 1,
-  smoothWheel: true,
-  smoothTouch: true,
-
+ smoothWheel: true, 
+  syncTouch: true 
 });
 
 function raf(time) {
