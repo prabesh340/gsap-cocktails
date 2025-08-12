@@ -10,6 +10,7 @@ const Navbar = () => {
       scrollTrigger: {
         trigger: "nav",
         start: "bottom top",
+        toggleActions: "play none reverse none",
       },
     });
 
@@ -17,9 +18,11 @@ const Navbar = () => {
       "nav",
       {
         backgroundColor: "transparent",
+        backdropFilter: "blur(0px)",
+        duration: 0.4
       },
       {
-        backgroundColor: "#00000050",
+        backgroundColor: "#00000010",
         backdropFilter: "blur(10px)",
         duration: 1,
         ease: "power1.inOut",

@@ -6,7 +6,9 @@
     font-family: "Modern Negra";
     src: url("/fonts/Modern Negra Demo.ttf") format("truetype");
 }
-
+::-webkit-scrollbar{
+    display: none;
+}
 @theme {
     --color-yellow: #e7d393;
     --color-white-100: #efefef;

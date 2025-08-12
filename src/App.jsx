@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import gsap from "gsap";
-import Lenis from 'lenis'
+import Lenis from "lenis";
 import { ScrollTrigger, SplitText } from "gsap/all";
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
@@ -8,21 +8,26 @@ import Cocktails from "./components/Cocktails";
 gsap.registerPlugin(ScrollTrigger, SplitText);
 const App = () => {
   useEffect(() => {
-    // Initialize Lenis
 const lenis = new Lenis({
-  autoRaf: true,
+  duration: 1,
+  smoothWheel: true,
+  smoothTouch: true,
+
 });
 
-// Listen for the scroll event and log the event data
-lenis.on('scroll', (e) => {
-  console.log(e);
-});
-  })
+function raf(time) {
+  lenis.raf(time);
+  requestAnimationFrame(raf);
+}
+
+requestAnimationFrame(raf);
+  });
   return (
     <main>
       <Navbar />
-      <Hero/>
-      <Cocktails/>
+      <Hero />
+      <Cocktails />
+      
     </main>
   );
 };
