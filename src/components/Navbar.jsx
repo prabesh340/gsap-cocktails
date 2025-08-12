@@ -23,7 +23,7 @@ const Navbar = () => {
       },
       {
         backgroundColor: "#00000010",
-        backdropFilter: "blur(10px)",
+        backdropFilter: "blur(4px)",
         duration: 1,
         ease: "power1.inOut",
       }
@@ -32,14 +32,14 @@ const Navbar = () => {
   return (
     <nav>
       <div>
-        <a href="#home" className="flex items-center gap-2">
+        <a href="#hero" className="flex items-center gap-2">
           <img src="/images/logo.png" alt="logo" />
           <p>Velvet Pour</p>
         </a>
         <ul>
           {navLinks.map((link) => (
             <li key={link.id}>
-              <a href={link.href}>{link.title}</a>
+              <a href={"#"+link.href}>{link.title}</a>
             </li>
           ))}
         </ul>
